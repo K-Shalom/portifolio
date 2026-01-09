@@ -17,30 +17,99 @@
         <a href="contact.html">Contact</a>
     </nav>
     </div>
- <div class="content">
-    <div class="profile-text-wrapper">
-        <div class="profile">
-            <img src="./files/images/profile.jpeg" alt="Shalom profile picture" />
+ <main class="home-container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hi, I'm</p>
+                    <h1 class="hero-name">Shalom K.</h1>
+                    <h2 class="hero-headline">Full-Stack Developer & Creative Thinker</h2>
+                    <p class="hero-description">
+                        Passionate about building innovative digital solutions and continuously expanding my skills in programming, databases, and web development. Welcome to my portfolio where I showcase my journey in the IT field.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="projects.html" class="primary-btn">View My Work</a>
+                        <a href="contact.html" class="secondary-btn">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="./files/images/profile.jpeg" alt="Shalom profile picture" />
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3 class="footer-logo">K Shalom</h3>
+                <p class="footer-tagline">Full-Stack Developer building clean, reliable, and modern web experiences.</p>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-heading">Quick Links</p>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <p class="footer-heading">Social</p>
+                <div class="footer-social-row">
+                    <a class="social-link" href="https://www.instagram.com/k__shalom?igsh=dXpmNDNlM2tjYWZ1" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="social-link" href="https://wa.me/250791293634?text=Hello%20Shalom%2C%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a class="social-link" href="mailto:shalommbabazi250@gmail.com" aria-label="Email">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a class="social-link" href="tel:+250791293634" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-
-        <div class="text-content">
-            <p class="greeting">Hi, I'm</p>
-            <h2 class="name">Shalom K.</h2>
-            <h3 class="headline">Welcome to My Portfolio</h3>
-            <p class="description">
-                "Hello, my name is <strong>Shalom</strong>. I’m passionate about technology and continuously building my skills in programming, databases, and web development. This portfolio showcases my projects, certificates, and ideas as I grow in the IT field. Feel free to explore my work and connect with me."
-            </p>
-            <a href="https://www.instagram.com/k__shalom?igsh=dXpmNDNlM2tjYWZ1" class="cta-btn"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/K-Shalom" class="cta-btn"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-            <a href="mailto:shalommbabazi250@gmail.com" class="cta-btn"><i class="fa fa-envelope"></i></a>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shalom. All rights reserved.</p>
         </div>
-    </div>
-</div>
+    </footer>
 
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-<footer class="footer">
-    <p>&copy; 2024 Shalom. All rights reserved.</p>
-</footer>
+<script>
+    // Header scroll effect
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        const backToTop = document.getElementById('backToTop');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+
+        if (backToTop) {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        }
+    });
+
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+</script>
 
 </body>
 </html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - K Shalom Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h4 class="logo">K&nbsp; &nbsp;Shalom </h4>
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a class="active" href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    </div>
+
+    <main class="projects-container">
+        <!-- Projects Hero Section -->
+        <section class="projects-hero">
+            <div class="hero-content">
+                <h1 class="projects-title">My Projects</h1>
+                <p class="projects-subtitle">A showcase of my work and technical skills</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="web">Web Development</button>
+                <button class="filter-btn" data-filter="app">Applications</button>
+                <button class="filter-btn" data-filter="academic">Academic</button>
+            </div>
+        </section>
+
+        <!-- Projects Grid -->
+        <section class="projects-showcase">
+            <div class="projects-grid">
+                <!-- E-Portfolio System -->
+                <div class="project-item" data-category="academic web">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="view-project-btn">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>E-Portfolio System</h3>
+                            <p class="project-description">Comprehensive academic management system designed for students and educators to manage portfolios, assignments, and academic achievements.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Chat App -->
+                <div class="project-item" data-category="app">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="view-project-btn">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Local Chat App</h3>
+                            <p class="project-description">Real-time messaging application with modern UI, supporting group chats, private messages, and file sharing capabilities.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Oracle DB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Website -->
+                <div class="project-item" data-category="web">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="view-project-btn">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Personal Portfolio</h3>
+                            <p class="project-description">Responsive personal portfolio website showcasing projects, skills, and professional experience with modern design principles.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">Font Awesome</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task Management System -->
+                <div class="project-item" data-category="web academic">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="view-project-btn">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Task Management System</h3>
+                            <p class="project-description">Web-based task management application with user authentication, project tracking, and team collaboration features.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">React</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather Dashboard -->
+                <div class="project-item" data-category="web">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="view-project-btn">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Weather Dashboard</h3>
+                            <p class="project-description">Interactive weather application providing real-time weather data, forecasts, and location-based weather information.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">API Integration</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">HTML5</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Library Management -->
+                <div class="project-item" data-category="academic">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-placeholder">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="project-overlay">
+                                <button class="view-project-btn">
+                                    <i class="fas fa-eye"></i> View Details
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Library Management System</h3>
+                            <p class="project-description">Complete library management solution with book tracking, member management, and inventory control features.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">File Handling</span>
+                                <span class="tech-tag">Data Structures</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="projects-cta">
+            <div class="cta-content">
+                <h2>Interested in Collaboration?</h2>
+                <p>I'm always open to discussing new projects and opportunities.</p>
+                <a href="contact.html" class="cta-button">Get In Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <h3 class="footer-logo">K Shalom</h3>
+                <p class="footer-tagline">Full-Stack Developer building clean, reliable, and modern web experiences.</p>
+            </div>
+
+            <div class="footer-links">
+                <p class="footer-heading">Quick Links</p>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <p class="footer-heading">Social</p>
+                <div class="footer-social-row">
+                    <a class="social-link" href="https://www.instagram.com/k__shalom?igsh=dXpmNDNlM2tjYWZ1" target="_blank" rel="noopener" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="social-link" href="https://wa.me/250791293634?text=Hello%20Shalom%2C%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a class="social-link" href="mailto:shalommbabazi250@gmail.com" aria-label="Email">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                    <a class="social-link" href="tel:+250791293634" aria-label="Phone">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Shalom. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            if (backToTop) {
+                if (window.scrollY > 400) {
+                    backToTop.classList.add('show');
+                } else {
+                    backToTop.classList.remove('show');
+                }
+            }
+        });
+
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            backToTopBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Filter functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectItems = document.querySelectorAll('.project-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                projectItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category').includes(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // View project buttons
+        const viewButtons = document.querySelectorAll('.view-project-btn');
+        viewButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                const projectCard = button.closest('.project-card');
+                const projectTitle = projectCard.querySelector('h3').textContent;
+                alert(`Opening details for: ${projectTitle}\n\nThis would typically open a modal or navigate to a detailed project page.`);
+            });
+        });
+    </script>
+</body>
+</html>
