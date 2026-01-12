@@ -10,12 +10,15 @@
 <body>
     <div class="header">
         <h4 class="logo">K&nbsp; &nbsp;Shalom </h4>
-    <nav class="navbar">
-        <a class="active" href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar" id="primary-navigation">
+            <a class="active" href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
     </div>
  <main class="home-container">
         <!-- Hero Section -->
@@ -61,7 +64,7 @@
                     <a class="social-link" href="https://www.instagram.com/k__shalom?igsh=dXpmNDNlM2tjYWZ1" target="_blank" rel="noopener" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a class="social-link" href="https://wa.me/250791293634?text=Hello%20Shalom%2C%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener" aria-label="WhatsApp">
+                    <a class="social-link js-whatsapp" href="https://wa.me/250791293634?text=Hello%20Shalom%2C%20I%20saw%20your%20portfolio!" data-app-href="whatsapp://send?phone=250791293634&text=Hello%20Shalom%2C%20I%20saw%20your%20portfolio!" target="_blank" rel="noopener" aria-label="WhatsApp">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                     <a class="social-link" href="mailto:shalommbabazi250@gmail.com" aria-label="Email">
@@ -87,6 +90,7 @@
     window.addEventListener('scroll', function() {
         const header = document.querySelector('.header');
         const backToTop = document.getElementById('backToTop');
+
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
         } else {
@@ -109,6 +113,46 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
+
+    // Mobile navigation toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.getElementById('primary-navigation');
+    if (navToggle && navMenu) {
+        const setExpanded = (isOpen) => {
+            navToggle.setAttribute('aria-expanded', String(isOpen));
+            navMenu.classList.toggle('open', isOpen);
+        };
+
+        navToggle.addEventListener('click', () => {
+            const isOpen = navMenu.classList.contains('open');
+            setExpanded(!isOpen);
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setExpanded(false));
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                setExpanded(false);
+            }
+        });
+    }
+
+    // WhatsApp deep link (open app when available, fallback to web)
+    document.querySelectorAll('a.js-whatsapp').forEach((link) => {
+        link.addEventListener('click', (e) => {
+            const appHref = link.getAttribute('data-app-href');
+            if (!appHref) return;
+
+            e.preventDefault();
+            const webHref = link.getAttribute('href');
+            window.location.href = appHref;
+            setTimeout(() => {
+                window.location.href = webHref;
+            }, 800);
+        });
+    });
 </script>
 
 </body>
